@@ -46,22 +46,22 @@ if __name__ == '__main__':
     for seq in data_yaml["split"]["train"]:
       seq = '{0:02d}'.format(int(seq))
       print("train", seq)
-      if not os.path.exists(os.path.join(combined_results_root, "sequences", seq, "clean_scans")):
-        os.makedirs(os.path.join(combined_results_root, "sequences", seq, "clean_scans"))
+      if not os.path.exists(os.path.join(combined_results_root, "sequences", seq, "predictions")):
+        os.makedirs(os.path.join(combined_results_root, "sequences", seq, "predictions"))
       seqs.append(seq)
   if split == 'valid':
     for seq in data_yaml["split"]["valid"]:
       seq = '{0:02d}'.format(int(seq))
       print("train", seq)
-      if not os.path.exists(os.path.join(combined_results_root, "sequences", seq, "clean_scans")):
-        os.makedirs(os.path.join(combined_results_root, "sequences", seq, "clean_scans"))
+      if not os.path.exists(os.path.join(combined_results_root, "sequences", seq, "predictions")):
+        os.makedirs(os.path.join(combined_results_root, "sequences", seq, "predictions"))
       seqs.append(seq)
   if split == 'test':
     for seq in data_yaml["split"]["test"]:
       seq = '{0:02d}'.format(int(seq))
       print("train", seq)
-      if not os.path.exists(os.path.join(combined_results_root, "sequences", seq, "clean_scans")):
-        os.makedirs(os.path.join(combined_results_root, "sequences", seq, "clean_scans"))
+      if not os.path.exists(os.path.join(combined_results_root, "sequences", seq, "predictions")):
+        os.makedirs(os.path.join(combined_results_root, "sequences", seq, "predictions"))
       seqs.append(seq)
   
   for seq in seqs:
